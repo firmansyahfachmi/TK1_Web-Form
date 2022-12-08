@@ -5,6 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team 7 - Form</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="wrapper">
+      <form class="top-wrapper">
+        <h1>Team 7 - Form App</h1>
+        <p>Isi data diri kamu di bawah ini.</p>
+        <br />
+        <br />
+
+        <label for="input-nama" class="form-field">
+          <h4>Nama</h4>
+          <input type="text" name="nama" id="input-nama" />
+        </label>
+        <br />
+        <br />
+
+        <label for="input-alamat" class="form-field">
+          <h4>Alamat</h4>
+          <textarea name="alamat" id="input-alamat" rows="7"></textarea>
+        </label>
+        <br />
+        <br />
+
+        <div class="form-field">
+          <h4>Jenis Kelamin</h4>
+          <div class="box-radio">
+            <label for="input-gender-l">
+              <input
+                type="radio"
+                name="gender"
+                id="input-gender-l"
+                value="Laki-Laki"
+              />
+              Laki-Laki
+            </label>
+
+            <label for="input-gender-p">
+              <input
+                type="radio"
+                name="gender"
+                id="input-gender-p"
+                value="Perempuan"
+              />
+              Perempuan
+            </label>
+          </div>
+        </div>
+
+        <label for="input-tgl" class="form-field">
+          <h4>Tanggal Lahir</h4>
+          <input type="date" name="tgl" id="input-tgl" />
+        </label>
+        <br />
+        <br />
+
+        <label for="input-foto" class="form-field">
+          <h4>Upload Foto</h4>
+          <input
+            type="file"
+            name="foto"
+            id="input-foto"
+            accept=".jpeg, .jpg, .png"
+          />
+        </label>
+        <br />
+        <br />
+        <label for="input-cv" class="form-field">
+          <h4>Upload CV</h4>
+          <input type="file" name="cv" id="input-cv" accept=".doc, .pdf" />
+        </label>
+        <br />
+        <br />
+        <label for="input-sertifikat" class="form-field">
+          <h4>Upload Sertifikat</h4>
+          <input
+            type="file"
+            name="sertifikat"
+            id="input-sertifikat"
+            accept=".doc, .pdf"
+          />
+        </label>
+        <br />
+        <br />
+
+        <div class="button-box">
+          <button type="submit" class="btn-submit">Submit</button>
+          <button type="reset" class="btn-reset">Reset</button>
+        </div>
+      </form>
+
+      <div class="bottom-wrapper">
+        <h2>Data Preview</h2>
+
+        <br>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
