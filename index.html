@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +10,7 @@
   </head>
   <body>
     <main class="wrapper">
-      <form class="top-wrapper">
+      <form class="top-wrapper" action="#" id="formSubmission">
         <h1>Team 7 - Form App</h1>
         <p>Isi data diri kamu di bawah ini.</p>
         <br />
@@ -31,7 +32,7 @@
 
         <div class="form-field">
           <h4>Jenis Kelamin</h4>
-          <div class="box-radio">
+          <div class="box-radio" id="genders">
             <label for="input-gender-l">
               <input
                 type="radio"
@@ -91,14 +92,26 @@
         <br />
 
         <div class="button-box">
-          <button type="submit" class="btn-submit">Submit</button>
+          <button type="button" onclick="addData(this)" class="btn-submit">Submit</button>
           <button type="reset" class="btn-reset">Reset</button>
         </div>
       </form>
 
       <div class="bottom-wrapper">
         <h2>Data Preview</h2>
-
+        <table id="users" cellspacing="3" cellpadding="3" border="1">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Alamat</th>
+              <th>Jenis Kelamin</th>
+              <th>Tanggal Lahir</th>
+              <th>Foto</th>
+              <th>CV</th>
+              <th>Sertifikat</th>
+            </tr>
+          </thead>
+        </table>
         <br>
       </div>
     </main>
